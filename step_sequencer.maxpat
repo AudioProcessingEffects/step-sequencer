@@ -2,43 +2,109 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 8,
-			"minor" : 5,
-			"revision" : 6,
+			"major" : 9,
+			"minor" : 0,
+			"revision" : 9,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1244.0, 380.0, 632.0, 497.0 ],
-		"bglocked" : 0,
-		"openinpresentation" : 0,
-		"default_fontsize" : 12.0,
-		"default_fontface" : 0,
-		"default_fontname" : "Arial",
-		"gridonopen" : 1,
+		"rect" : [ 34.0, 76.0, 1373.0, 791.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
-		"gridsnaponopen" : 1,
-		"objectsnaponopen" : 1,
-		"statusbarvisible" : 2,
-		"toolbarvisible" : 1,
-		"lefttoolbarpinned" : 0,
-		"toptoolbarpinned" : 0,
-		"righttoolbarpinned" : 0,
-		"bottomtoolbarpinned" : 0,
-		"toolbars_unpinned_last_save" : 0,
-		"tallnewobj" : 0,
-		"boxanimatetime" : 200,
-		"enablehscroll" : 1,
-		"enablevscroll" : 1,
-		"devicewidth" : 0.0,
-		"description" : "",
-		"digest" : "",
-		"tags" : "",
-		"style" : "",
-		"subpatcher_template" : "",
-		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-31",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 142.0, 372.0, 150.0, 20.0 ],
+					"text" : "Generates our MIDI note!"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-29",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 200.5, 312.0, 272.0, 34.0 ],
+					"text" : "Create a MIDI Note based on note number, velocity, duration (ms), and channel"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-26",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 578.0, 209.0, 460.0, 20.0 ],
+					"text" : "Selects the output based on the input i.e. receive a 1 - send bang from first outlet etc."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-21",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 162.0, 162.5, 188.0, 20.0 ],
+					"text" : "Counts number of bangs from 1-8"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-17",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 277.0, 119.5, 150.0, 20.0 ],
+					"text" : "Change Direction"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-13",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 236.0, 118.5, 29.5, 22.0 ],
+					"text" : "2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 200.5, 118.5, 29.5, 22.0 ],
+					"text" : "1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 162.0, 118.5, 29.5, 22.0 ],
+					"text" : "0"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-2",
 					"maxclass" : "message",
@@ -46,7 +112,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 493.0, 259.5, 29.5, 22.0 ],
-					"text" : "64"
+					"text" : "72"
 				}
 
 			}
@@ -81,7 +147,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "float" ],
 					"patching_rect" : [ 83.5, 318.0, 108.0, 22.0 ],
-					"text" : "makenote 127 127"
+					"text" : "makenote 127 200"
 				}
 
 			}
@@ -93,7 +159,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 434.5, 259.5, 29.5, 22.0 ],
-					"text" : "62"
+					"text" : "71"
 				}
 
 			}
@@ -105,7 +171,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 376.0, 259.5, 29.5, 22.0 ],
-					"text" : "60"
+					"text" : "69"
 				}
 
 			}
@@ -117,7 +183,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 317.5, 259.5, 29.5, 22.0 ],
-					"text" : "62"
+					"text" : "67"
 				}
 
 			}
@@ -129,7 +195,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 259.0, 259.5, 29.5, 22.0 ],
-					"text" : "55"
+					"text" : "65"
 				}
 
 			}
@@ -141,7 +207,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 200.5, 259.5, 29.5, 22.0 ],
-					"text" : "57"
+					"text" : "64"
 				}
 
 			}
@@ -153,7 +219,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 142.0, 259.5, 29.5, 22.0 ],
-					"text" : "56"
+					"text" : "62"
 				}
 
 			}
@@ -165,7 +231,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 83.5, 259.5, 29.5, 22.0 ],
-					"text" : "52"
+					"text" : "60"
 				}
 
 			}
@@ -176,8 +242,8 @@
 					"numinlets" : 9,
 					"numoutlets" : 9,
 					"outlettype" : [ "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "" ],
-					"patching_rect" : [ 83.5, 208.0, 487.0, 22.0 ],
-					"text" : "select 0 1 2 3 4 5 6 7"
+					"patching_rect" : [ 84.0, 208.0, 485.0, 22.0 ],
+					"text" : "select 1 2 3 4 5 6 7 8"
 				}
 
 			}
@@ -189,7 +255,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "int", "", "", "int" ],
 					"patching_rect" : [ 83.5, 160.5, 69.0, 22.0 ],
-					"text" : "counter 0 7"
+					"text" : "counter 1 8"
 				}
 
 			}
@@ -236,6 +302,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-23", 0 ],
 					"source" : [ "obj-12", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 1 ],
+					"source" : [ "obj-13", 0 ]
 				}
 
 			}
@@ -318,6 +391,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-4", 1 ],
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
 					"source" : [ "obj-8", 0 ]
 				}
@@ -369,6 +449,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-22", 0 ],
 					"source" : [ "obj-8", 6 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 1 ],
+					"source" : [ "obj-9", 0 ]
 				}
 
 			}
